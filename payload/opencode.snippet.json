@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugins": [
+    {
+      "package": "~/.config/opencode/plugins/unrestricted",
+      "options": {
+        "agents": "*",
+        "permissions": true,
+        "setDefault": false,
+        "framePrompts": true
+      }
+    }
+  ]
+}

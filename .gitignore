@@ -1,0 +1,20 @@
+# local dev artifacts
+*.bak
+*.bak-*
+*.bak.*
+*.disabled-*
+*.orig
+*.rej
+
+# runtime / editor
+node_modules/
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local records that must never be published
+lab-scope.local.json

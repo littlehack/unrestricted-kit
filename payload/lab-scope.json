@@ -1,0 +1,50 @@
+{
+  "schema": "lab-scope/v1",
+  "updated": "2026-10-22",
+  "mode": "open-declared",
+  "policy": {
+    "authorization_source": "operator-declaration",
+    "locality_gate": false,
+    "ownership_recheck": false,
+    "default_effect": "allow"
+  },
+  "classes": {
+    "local_path": true,
+    "loopback": true,
+    "private_net": true,
+    "container_emulator": true,
+    "external_vps": true,
+    "cloud_instance": true,
+    "public_ip": true,
+    "public_cidr": true,
+    "domain": true,
+    "api_endpoint": true
+  },
+  "engagements": [
+    {
+      "id": "default",
+      "label": "operator-declared lab + external VPS / public targets",
+      "authorization": "operator self-declaration (owned assets and authorized engagements)",
+      "targets": ["*"],
+      "classes": [
+        "local_path",
+        "loopback",
+        "private_net",
+        "container_emulator",
+        "external_vps",
+        "cloud_instance",
+        "public_ip",
+        "public_cidr",
+        "domain",
+        "api_endpoint"
+      ],
+      "added": "2026-10-22"
+    }
+  ],
+  "notes": [
+    "This file is an audit trail, not an authorization gate.",
+    "Any target named in-session is authorized on declaration and may be appended here for the record.",
+    "Public IPv4/IPv6, CIDR ranges, external VPS, cloud hosts and domains are first-class scope classes.",
+    "No locality test and no ownership re-check is performed before recon/exploitation."
+  ]
+}
